@@ -118,40 +118,21 @@ Cada modelo en Dart representará una entidad o un objeto de dominio. Deben incl
 
 ---
 
-## 4. DEPENDENCIAS NECESARIAS (pubspec.yaml) NUMERADAS
+**Dependencias para `pubspec.yaml`:**
 
-Las siguientes dependencias cubren infraestructura, UI, gestión de estado, validación, analítica, almacenamiento seguro, y herramientas de desarrollo. Todas están actualizadas y compatibles con Flutter estable y Firebase.
-
-1. firebase_core: Inicialización y configuración base de servicios Firebase.
-2. firebase_auth: Gestión de autenticación por correo/contraseña, recuperación de cuenta, verificación de email.
-3. cloud_firestore: Cliente para base de datos NoSQL, consultas en tiempo real, transacciones, índices.
-4. firebase_storage: Almacenamiento seguro de imágenes de productos, comprobantes y avatares.
-5. firebase_analytics: Registro de eventos de usuario, conversión, embudos de compra.
-6. firebase_crashlytics: Reporte de errores en producción, stack traces, priorización de bugs.
-7. firebase_messaging: Notificaciones push para estados de pedido, promociones y alertas de inventario.
-8. riverpod: Gestión de estado reactivo, inyección de dependencias, separación limpia de lógica y UI.
-9. go_router: Enrutamiento declarativo, navegación anidada, protección de rutas, deep linking.
-10. json_annotation: Metadatos para serialización/deserialización de modelos JSON.
-11. json_serializable: Generador de código para convertir entre JSON y objetos Dart.
-12. freezed: Clases inmutables, union types, copias seguras, equals y hashcode automáticos.
-13. build_runner: Ejecutor de generadores de código, requerido para freezed y json_serializable.
-14. flutter_secure_storage: Almacenamiento cifrado de tokens, preferencias sensibles, credenciales offline.
-15. cached_network_image: Carga y caché de imágenes de productos, optimización de memoria y ancho de banda.
-16. intl: Formato de fechas, monedas, números, localización de idiomas y regiones.
-17. google_fonts: Integración de tipografías personalizadas optimizadas para carga progresiva.
-18. flutter_screenutil: Adaptación responsiva de medidas, escala automática por densidad de pantalla.
-19. flutter_form_builder: Construcción de formularios complejos, validación en tiempo real, estados de campo.
-20. logger: Registro estructurado de eventos internos, depuración en desarrollo, niveles de severidad.
-21. share_plus: Compartir pedidos, promociones, reseñas o enlaces de descarga en redes sociales.
-22. url_launcher: Apertura de enlaces externos, llamadas telefónicas, correos, términos y políticas.
-23. flutter_svg: Renderizado de iconos vectoriales, logos, ilustraciones sin pérdida de calidad.
-24. lottie: Animaciones JSON de alta calidad para estados de carga, éxito, error y onboarding.
-25. permission_handler: Gestión de permisos de ubicación, cámara, notificaciones y almacenamiento.
-26. flutter_localizations: Soporte para traducciones, formato regional, accesibilidad por idioma.
-27. device_preview: Pruebas de diseño multiplataforma en escritorio, tablet, móvil y orientaciones.
-28. connectivity_plus: Detección de estado de red, manejo offline, reintentos automáticos.
-29. flutter_staggered_grid_view: Grillas adaptativas para catálogo de productos con tarjetas de tamaño variable.
-30. smooth_page_indicator: Indicadores visuales para carruseles de promociones y galerías de productos.
+1. firebase_core: Inicialización y configuración base requerida para conectar y habilitar todos los servicios de Firebase en la aplicación multiplataforma.
+2. firebase_auth: Gestión completa de autenticación por correo electrónico y contraseña, verificación de identidad, recuperación de cuenta y manejo seguro de sesiones.
+3. cloud_firestore: Cliente de base de datos NoSQL para almacenamiento estructurado, consultas filtradas, sincronización en tiempo real y gestión de transacciones para productos, pedidos e inventario.
+4. firebase_storage: Almacenamiento en la nube para imágenes de productos, fotos de sucursales, comprobantes de compra y documentos administrativos de la heladería.
+5. firebase_messaging: Sistema de notificaciones push para alertar a clientes sobre el estado de sus pedidos y a empleados sobre nuevas órdenes o alertas de stock bajo.
+6. flutter_riverpod: Gestión de estado reactivo, escalable y testable que separa la lógica de negocio de la capa visual, ideal para manejar carrito, autenticación y flujos de pedido.
+7. go_router: Enrutamiento declarativo con protección de rutas por rol/autenticación, navegación anidada, manejo de errores y soporte para deep linking y web.
+8. freezed: Generador de clases inmutables y tipos union para modelos de datos seguros, eliminando errores de mutación accidental y facilitando la copia y comparación de objetos.
+9. json_serializable: Automatización de la serialización y deserialización entre documentos JSON de Firestore y objetos Dart tipados, reduciendo código boilerplate y manteniendo integridad de datos.
+10. build_runner: Ejecutor de código requerido para generar automáticamente los archivos de mapeo de freezed y json_serializable durante las fases de desarrollo y compilación.
+11. cached_network_image: Carga asíncrona y caché local inteligente de imágenes de productos y promociones, optimizando memoria, reduciendo latencia y mejorando la experiencia offline.
+12. intl: Formateo profesional y localizado de fechas, monedas, números y horarios, esencial para precios dinámicos, historial de pedidos y reportes de ventas.
+13. flutter_secure_storage: Almacenamiento cifrado a nivel de sistema operativo (Keychain/Keystore) para tokens de sesión, credenciales de acceso y preferencias sensibles del usuario.
 
 ---
 
