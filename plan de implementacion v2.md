@@ -136,7 +136,7 @@ Cada modelo en Dart representará una entidad o un objeto de dominio. Deben incl
 
 ---
 
-## 5. ESTRUCTURA COMPLETA DEL PROYECTO (ÁRBOL DE CARPETAS)
+## 4. ESTRUCTURA COMPLETA DEL PROYECTO (ÁRBOL DE CARPETAS)
 
 La arquitectura sigue un enfoque por características (feature-first) combinado con capas limpias (clean architecture) para mantener escalabilidad, testabilidad y separación de responsabilidades.
 
@@ -211,7 +211,7 @@ heladeria_omar_app/
 
 ---
 
-## 6. PROCEDIMIENTO PASO A PASO PARA CREAR EL PROYECTO
+## 5. PROCEDIMIENTO PASO A PASO PARA CREAR EL PROYECTO
 
 **Fase 1: Configuración del Entorno y Firebase**
 1. Verificar que Flutter SDK esté instalado en versión estable actualizada. Configurar el entorno Antigravity con soporte para desarrollo multiplataforma y depuración en tiempo real.
@@ -262,7 +262,7 @@ heladeria_omar_app/
 
 ---
 
-## 7. DIRECTRIZES CRÍTICAS DE ARQUITECTURA, UX Y MULTIPLATAFORMA
+## 6. DIRECTRIZES CRÍTICAS DE ARQUITECTURA, UX Y MULTIPLATAFORMA
 
 **Adaptación Relacional a NoSQL:**
 Firestore no soporta joins nativos. Las relaciones se resuelven mediante documentos embebidos para datos frecuentes (detalle_pedido dentro de pedido), o referencias por ID para datos independientes que se actualizan a distinta frecuencia (cliente, sucursal). Las consultas complejas se precalculan en el backend o se manejan con subcolecciones indexadas.
